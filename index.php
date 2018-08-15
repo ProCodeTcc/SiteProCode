@@ -65,10 +65,10 @@
         <section class="full_principal">
             <div class="content">
                 <div id="logo">
-                    <img src="imagens/teste.png">
+                    <img src="imagens/teste2.png">
                 </div>
                 <div id="texto">
-                    ProCode
+                    
                 </div>
                 <div id="slogan">
                     ProCode O Futuro é agora !
