@@ -1,0 +1,271 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Cor da logo #3053a5*/
+
+body{
+    font-family: sans-serif;
+    background-image: url('../imagens/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #3053a5;
+    opacity: 0.7;
+    padding-top: 5px;
+    z-index: 999px;
+    position: fixed;
+}
+
+.full_principal{
+    width: 100%;
+    height: 100%;
+/*    background-color: rgba(48, 83, 165, 0.47);*/
+}
+
+.full{
+    width: 100%;
+    height: 450px;
+    background-color: rgba(48, 83, 165, 0.47);
+}
+
+.segundo_full{
+    width: 100%;
+    min-height: 0px;
+    background-color: rgba(240, 248, 255, 0.9);
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+.content{
+    width: 90%;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+#logo{
+    width: 500px;
+    height: 500px;
+/*    background-color: #3053a5;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#logo img{
+    width: 500px;
+    height: 500px;
+}
+
+#texto{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+#slogan{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+#content img{
+    width: 90%;
+    height: 90%;
+}
+
+#esquerda{
+    width: 65%;
+    height: 400px;
+    float: left;
+}
+
+#direita{
+    width: 35%;
+    height: 400px;
+    float: left;
+}
+
+.titulo{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+
+#imagem{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#imagem img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#texto_fazemos{
+    width: 90%;
+    height: 85%;
+    float: left;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+    overflow: auto;
+}
+
+.icones{
+    width: 280px;
+    min-height: 200px;
+    float: left;
+    margin-left: 80px;
+    padding-left: 20px;
+}
+
+.icone_redondo{
+    width: 200px;
+    height: 200px;
+    background-color: #3053a5;
+    border-radius: 100%;
+}
+
+.icone_redondo_estilo{
+    width: 190px;
+    height: 190px;
+}
+
+.icone_redondo:hover{
+    background-color: #1540a5;
+}
+
+.icone_redondo img{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.espaco{
+    width: 100%;
+    height: 400px;
+}
+
+.sub_descricao{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.descricao{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #3053a5;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    color: #dcdcdc;
+}
+
+.teste{
+    width: 100%;
+    min-height: 0px;
+}
+
+.segura{
+    width: 70%;
+    min-height: :0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+}
+
+.pula{
+    margin-top: 15px;
+}
+
+.portfolio{
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto_protfolio{
+    text-align: center;
+    font-size: 30px;
+}
+
+.area_protfolio{
+    width: 66%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagens_protfolio{
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+.imagens_protfolio img{
+    min-width: 0;
+    min-height: 0;
+}
+
+.imagens_protfolio_mobile{
+    width: 350px;
+    height: 500px;
+    float: left;
+    margin-left:70px;
+}
+
+.imagens_protfolio_unico{
+    width: 500px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* fechar modal */
+.fechar{
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: -70px;
+    margin-right: 10px;
+    background-image: url('../imagens/fechar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  personalização da barra de rolagem */
+::-webkit-scrollbar-thumb{
+    background-color: #FFF;
+    height: 3px;
+}
+
+::-webkit-scrollbar{
+    height: 8px;
+    width:  7px;
+    background-color: #454545;
+}
