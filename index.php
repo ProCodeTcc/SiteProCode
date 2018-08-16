@@ -47,86 +47,108 @@
                 $("#mensagem").val("");
             }
 
-            // código de efeito ancora do site
-            $(function() {
-              $('a').on('click',function(event){
-                var $anchor = $(this);
-                $('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top}, 1000,'swing');
-                // Outras Animações
-                // linear, swing, jswing, easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine, easeInExpo, easeInCirc, easeInElastic,
-                // easeInBack, easeInBounce, easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine, easeOutExpo, easeOutCirc,
-                // easeOutElastic, easeOutBack, easeOutBounce, easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo,
-                // easeInOutCirc, easeInOutElastic, easeInOutBack, easeInOutBounce
-              });
-            });
+                        // código de efeito ancora do site
+            var CORRECTION = 90;  // height of the navbar
+             // don't forget to setup the data-offset attribute of the <body> tag
+
+             var DELAY_READING = 4000; // 4 seconds = 4000; 10 seconds = 10000
+             var DELAY_SCROLLING = 1500;
+
+             var links = [ '#quemsomos', '#solucoes','#protifolio'];
+             var timerId = 0;
+
+             $(document).ready(function(){
+                     $( 'a' ).click(function(event) {
+                       event.preventDefault();
+                       scrollToLink( $(this).attr('href') );
+                 });
+             });
+
+             function scrollToLink( link ) {
+               selectLink = $( link );
+               if ( selectLink.length ) {
+                 var top = selectLink.offset().top - CORRECTION;
+                 $('body,html').stop().animate({scrollTop: top}, DELAY_SCROLLING);
+               } else {
+                 console.log('The link is not found: ' + link);
+               }
+             }
         </script>
     </head>
     <body>
         <header>
             <!--
-            hover dos itens
-            efeito de scroll co js
             efeito vue-typer
             mudar a font do site
 -->
-        <nav class="contentCentralizar">
-            <div class="logoHeader">
-
-            </div>
-            <section class="content_menu">
-                <div class="caixas">
-                    <a href="#quemSomos">Quem Somos</a>
-                </div>
-                <div class="caixas">
-                    <a href="#solucoes">Soluções</a>
-                </div>
-                <div class="caixas">
-                    <a href="#portifolio">Portfolio</a>
-                </div>
-                <div id="abrirModal" class="caixas">
-                    <a class="a">
-                        Fale Conosco
+            <nav class="contentCentralizar">
+                <a href="body">
+                    <div class="logoHeader"></div>
+                </a>
+                <section class="content_menu">
+                    <a href="#quemSomos">
+                        <div class="caixas">
+                            Quem Somos
+                        </div>
                     </a>
-                </div>
-            </section>
-        </nav>
+                    <a href="#solucoes">
+                        <div class="caixas">
+                            Soluções
+                        </div>
+                    </a>
+                    <a href="#portifolio">
+                        <div class="caixas">
+                            Portifólio
+                        </div>
+                    </a>
+                    <a>
+                        <div id="abrirModal" class="caixas">
+                            Fale Conosco
+                        </div>
+                    </a>
+                </section>
+            </nav>
         </header>
+
+        <div class="alinhamento"></div>
+
+        <!-- modal -->
         <div class="container">
             <div class="fechar" onclick="limparCampos();"></div>
             <div class="modal">
                 <?php require_once"modal.php"; ?>
             </div>
         </div>
+
+        <!-- home do site -->
         <section class="full_principal">
             <div class="content">
                 <div id="logo">
                     <img src="imagens/teste2.png">
                 </div>
-                <div id="texto">
-
-                </div>
                 <div id="slogan">
                     O Futuro é agora !
                 </div>
-
              </div>
         </section>
+
+        <!-- seção que fala sobre a emrpesa -->
         <section class="segundo_full">
             <div class="content">
                 <div id="esquerda">
                     <div class="titulo" id="quemSomos">
                         <u>
-                            QUEM SOMOS
+                            QUEM SOMOS?
                         </u>
                     </div>
                     <div id="texto_fazemos">
-                        <p class="pula">
-                            ProCode, uma StartUp no ramo de desenvolvimento de software, foi idealizada por um grupo de quatro amigos, que são apaixonados por tecnologia.
+                        <p class="pula1">
+                            A ProCode, uma StartUp no ramo de desenvolvimento de software, foi idealizada por um grupo de quatro amigos, que são apaixonados por tecnologia.
                         </p>
-                        <p class="pula">
+                        <p class="pula1">
                             O sonho de trabalhar com o que gostam, os levaram se especializarem na área de desenvolvimento de softwares, mas há um tempo atrás não tinham pretensão do que estava por vir. Até que se conheceram em um evento de tecnologia, mantiveram contato e idealizaram um sonho de serem reconhecidos no mercado, mas não como funcionário e sim como empresários.
                         </p>
-                        <p class="pula">
+                        <p class="pula1">
                             Fundada no ano de 2018, esta empresa tem por finalidade ser umas das melhores na área de desenvolvimento, trabalhando com soluções para as plataformas Web, Mobile(Android) e Desktop. Com a intenção potencializar pequenos negócios no mercado de trabalho, a empresa começou a ficar conhecida no mundo digital.
                         </p>
                     </div>
@@ -138,11 +160,14 @@
                 </div>
              </div>
         </section>
-        <div class="full"></div>
-        <section class="segundo_full" id="solucoes">
-            <div class="content">
 
-                    <div class="teste">
+        <!-- div transparente que faz efeito do background -->
+        <div class="full" id="fundo2"></div>
+
+        <!-- seção que fala das soluções -->
+        <section class="segundo_full" id="solucoes">
+            <div class="content content_conteudo">
+                <div class="teste">
                     <div class="titulo">
                         <u>
                             SOLUÇÕES
@@ -156,7 +181,6 @@
                             <div class="descricao">
                                 <p class="pula"><b>Desktop</b></p>
                                 <p class="pula">Desktop é a principal ferramenta para o controle da empresa.</p>
-
                             </div>
                         </div>
                         <div class="icones">
@@ -181,22 +205,24 @@
                 </div>
              </div>
         </section>
+
+        <!-- div transparente que faz efeito do background -->
         <div class="full"></div>
+
+        <!-- sseção que fala de nossos produtos -->
         <section class="segundo_full" id="portifolio">
             <div class="content">
                 <div class="teste">
                     <div class="titulo">
                         <u>
-                            PORTFOLIO
+                            Portifólio
                         </u>
                     </div>
                     <div class="portfolio">
                         <div class="texto_protfolio">
-
                             Barbearia Cachorro Loko
                         </div>
                         <div class="area_protfolio">
-
                             <div class="imagens_protfolio_unico">
                                 <img src="imagens/web_pc2.png">
                             </div>
@@ -218,6 +244,7 @@
                 </div>
              </div>
         </section>
+        <!-- rodapé do site -->
         <footer>
             © COPYRIGHT 2018 - ProCode LTDA, TODOS OS DIREITOS RESERVADOS.
         </footer>

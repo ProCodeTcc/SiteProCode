@@ -1,9 +1,14 @@
+/* Cor da logo #3053a5*/
+@font-face {
+    font-family: OCRAStd;
+    src: url('fonts/OCRAStd.otf');
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
-
-/* Cor da logo #3053a5*/
 
 body{
     font-family: sans-serif;
@@ -14,21 +19,20 @@ body{
 
 }
 
+/* CABEÇALHO */
 header{
     width: 100%;
     height: 90px;
-    background-color: #3053a5;
-    /* background-color: #000000; */
-    /* opacity: 0.7; */
+    background-color: #000000;
     padding-top: 5px;
     z-index: 999px;
     position: fixed;
+    font-family: "OCRAStd";
 }
 
 .contentCentralizar{
     width: 1300px;
     height: 85px;
-    /* background-color: yellow; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,7 +40,6 @@ header{
 .logoHeader{
     width: 230px;
     height: 85px;
-    /* background-color: forestgreen; */
     float: left;
     background-image: url('../imagens/teste2.png');
     background-position: center;
@@ -48,7 +51,6 @@ header{
     height: 85px;
     width: 650px;
     float: right;
-    /* background-color: pink; */
 }
 
 .caixas{
@@ -56,11 +58,11 @@ header{
     height: 40px;
     text-align: center;
     float: left;
-    margin: 3px;
+    margin-right: 10px;
     cursor: pointer;
     margin-top: 20px;
     font-style: 900;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     line-height: 40px;
     vertical-align: middle;
@@ -70,41 +72,35 @@ header{
     transition: 0.3s;
     border-bottom: solid 5px #FFFFFF;
 }
+/* FIM CABEÇALHO */
 
+/* div que alinha o conteudo com o header */
+.alinhamento{
+    width: 100%;
+    height: 90px;
+}
+
+/* div que fica logo abaixo do header area do logo */
 .full_principal{
     width: 100%;
     height: 100%;
-/*    background-color: rgba(48, 83, 165, 0.47);*/
-}
-
-.full{
-    width: 100%;
-    height: 450px;
-    /* background-color: rgba(48, 83, 165, 0.47); */
-}
-
-.segundo_full{
-    width: 100%;
-    min-height: 0px;
-    background-color: rgba(255, 255, 255, 1);
-    padding-bottom: 30px;
-    overflow: auto;
 }
 
 .content{
-    width: 90%;
+    width: 1500px;
     min-height: 400px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 30px;
+    margin-top: 20px;
+    /* background-color: pink; */
 }
 
 #logo{
     width: 800px;
     height: 300px;
-/*    background-color: yellow;*/
+   /* background-color: yellow; */
     margin-top: 200px;
-
     margin-left: auto;
     margin-right: auto;
 
@@ -116,26 +112,29 @@ header{
     margin-right: auto;
 }
 
-#texto{
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    font-weight: bold;
-}
-
 #slogan{
     width: 100%;
     height: 70px;
     text-align: center;
     font-size: 50px;
     color: white;
+    font-family: "OCRAStd";
 }
 
-#content img{
-    width: 90%;
-    height: 90%;
+/* area do site que fala sobre a empresa */
+.segundo_full{
+    width: 100%;
+    min-height: 0px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+.content_conteudo{
+    width: 1600px;
+    height: 600px;
+    /* background-color: blue; */
 }
 
 #esquerda{
@@ -144,16 +143,38 @@ header{
     float: left;
 }
 
-#direita{
-    width: 35%;
-    height: 400px;
-    float: left;
-}
-
 .titulo{
     width: 100%;
     height: 50px;
     font-size: 30px;
+    font-family: "OCRAStd";
+    text-decoration: none;
+    font-weight: 900;
+}
+
+#texto_fazemos{
+    width: 90%;
+    height: 85%;
+    float: left;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+    overflow: auto;
+}
+
+.pula1{
+    margin-top: 15px;
+}
+
+.pula{
+    margin-top: 15px;
+    font-family: "OCRAStd";
+}
+
+#direita{
+    width: 35%;
+    height: 400px;
+    float: left;
 }
 
 #imagem{
@@ -168,29 +189,48 @@ header{
     border-radius: 10px;
 }
 
-#texto_fazemos{
-    width: 90%;
-    height: 85%;
-    float: left;
-    font-size: 20px;
-    font-family: sans-serif;
-    text-align: justify;
-    overflow: auto;
+
+/* div que da um espaçamento entre as sections */
+.full{
+    width: 100%;
+    height: 450px;
+}
+
+#fundo2{
+    background-image: url('../imagens/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*area de soluções desenvolvidas pelas empresas*/
+.segura{
+    width: 70%;
+    min-height: :0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    /* background-color: green; */
 }
 
 .icones{
-    width: 280px;
+    width: 310px;
     min-height: 200px;
     float: left;
-    margin-left: 80px;
-    padding-left: 20px;
+    margin-left: 30px;
+    padding-left: 10px;
+    /* background-color: red; */
 }
 
 .icone_redondo{
     width: 200px;
     height: 200px;
-    background-color: #3053a5;
+    background-color: #FFFFFF;
     border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #000000;
 }
 
 .icone_redondo_estilo{
@@ -207,50 +247,20 @@ header{
     margin-top: 50px;
 }
 
-.espaco{
-    width: 100%;
-    height: 400px;
-}
-
-.sub_descricao{
-    width: 100%;
-    height: 100px;
-    text-align: center;
-}
-
 .descricao{
-    width: 200px;
-    height: 100px;
+    width: 270px;
+    height: 140px;
     text-align: center;
     font-size: 18px;
+    /* background-color: yellow; */
 }
 
-footer{
-    width: 100%;
-    height: 80px;
-    background-color: #3053a5;
-    font-size: 1.2em;
-    text-align: center;
-    line-height: 80px;
-    vertical-align: middle;
-    color: #dcdcdc;
-}
-
+/* area de portifolio do site */
 .teste{
     width: 100%;
     min-height: 0px;
-}
-
-.segura{
-    width: 70%;
-    min-height: :0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-}
-
-.pula{
-    margin-top: 15px;
+    height: auto;
+    /* background-color: orange; */
 }
 
 .portfolio{
@@ -262,6 +272,7 @@ footer{
 .texto_protfolio{
     text-align: center;
     font-size: 30px;
+    font-family: "OCRAStd";
 }
 
 .area_protfolio{
@@ -294,6 +305,23 @@ footer{
     height: 500px;
     margin-right: auto;
     margin-left: auto;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    /* background-color: #3053a5; */
+    background-color: #000000;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    color: #dcdcdc;
+}
+
+/* caixa que abre a modal fale conosco */
+#abrirModal{
+    margin-left: 10px;
 }
 
 /* fechar modal */
