@@ -26,38 +26,73 @@
         <link rel="stylesheet" href="css/styleModal.css">
         <script src="js/jquery.js"> </script>
         <script>
+            // abrir a modal
             $(document).ready(function(){
                 $("#abrirModal").click(function(){
                     $(".container").fadeIn(600);
                 });
             });
-
+            // fechar a modal
             $(document).ready(function(){
                 $(".fechar").click(function(){
                     $(".container").fadeOut(600);
                 });
             });
+
+            // função para limpar os campos ao fechar a modal
+            function limparCampos(){
+                $("#nome").val("");
+                $("#email").val("");
+                $("#telefone").val("");
+                $("#mensagem").val("");
+            }
+
+            // código de efeito ancora do site
+            $(function() {
+              $('a').on('click',function(event){
+                var $anchor = $(this);
+                $('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top}, 1000,'swing');
+                // Outras Animações
+                // linear, swing, jswing, easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine, easeInExpo, easeInCirc, easeInElastic,
+                // easeInBack, easeInBounce, easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine, easeOutExpo, easeOutCirc,
+                // easeOutElastic, easeOutBack, easeOutBounce, easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo,
+                // easeInOutCirc, easeInOutElastic, easeInOutBack, easeInOutBounce
+              });
+            });
         </script>
     </head>
     <body>
         <header>
-            <div>
-                <a href="#quemSomos">Quem Somos?</a>
+            <!--
+            hover dos itens
+            efeito de scroll co js
+            efeito vue-typer
+            mudar a font do site
+-->
+        <nav class="contentCentralizar">
+            <div class="logoHeader">
+
             </div>
-            <div>
-                Soluções
-            </div>
-            <div>
-                Portfolio
-            </div>
-            <div id="abrirModal">
-                <a class="a">
-                    Fale Conosco
-                </a>
-            </div>
+            <section class="content_menu">
+                <div class="caixas">
+                    <a href="#quemSomos">Quem Somos</a>
+                </div>
+                <div class="caixas">
+                    <a href="#solucoes">Soluções</a>
+                </div>
+                <div class="caixas">
+                    <a href="#portifolio">Portfolio</a>
+                </div>
+                <div id="abrirModal" class="caixas">
+                    <a class="a">
+                        Fale Conosco
+                    </a>
+                </div>
+            </section>
+        </nav>
         </header>
         <div class="container">
-            <div class="fechar"></div>
+            <div class="fechar" onclick="limparCampos();"></div>
             <div class="modal">
                 <?php require_once"modal.php"; ?>
             </div>
@@ -68,10 +103,10 @@
                     <img src="imagens/teste2.png">
                 </div>
                 <div id="texto">
-                    
+
                 </div>
                 <div id="slogan">
-                    ProCode O Futuro é agora !
+                    O Futuro é agora !
                 </div>
 
              </div>
@@ -104,7 +139,7 @@
              </div>
         </section>
         <div class="full"></div>
-        <section class="segundo_full">
+        <section class="segundo_full" id="solucoes">
             <div class="content">
 
                     <div class="teste">
@@ -147,7 +182,7 @@
              </div>
         </section>
         <div class="full"></div>
-        <section class="segundo_full">
+        <section class="segundo_full" id="portifolio">
             <div class="content">
                 <div class="teste">
                     <div class="titulo">
