@@ -48,8 +48,8 @@ header{
 }
 
 .content_menu{
-    height: 85px;
     width: 650px;
+    height: 85px;
     float: right;
 }
 
@@ -83,11 +83,11 @@ header{
 /* div que fica logo abaixo do header area do logo */
 .full_principal{
     width: 100%;
-    height: 100%;
+    height: 99%;
 }
 
 .content{
-    width: 1500px;
+    width: 1300px;
     min-height: 400px;
     height: auto;
     margin-left: auto;
@@ -99,7 +99,6 @@ header{
 #logo{
     width: 800px;
     height: 300px;
-   /* background-color: yellow; */
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -124,42 +123,41 @@ header{
 /* area do site que fala sobre a empresa */
 .segundo_full{
     width: 100%;
-    min-height: 0px;
+    min-height: 400px;
     height: auto;
     background-color: rgba(255, 255, 255, 1);
     padding-bottom: 30px;
     overflow: auto;
 }
 
-.content_conteudo{
-    width: 1600px;
-    height: 600px;
-    /* background-color: blue; */
-}
-
 #esquerda{
-    width: 65%;
-    height: 400px;
+    width: 60%;
+    min-height: 420px;
+    height: auto;
     float: left;
 }
 
 .titulo{
-    width: 100%;
-    height: 50px;
+    width: 98%;
+    height: 60px;
     font-size: 30px;
     font-family: "OCRAStd";
     text-decoration: none;
     font-weight: 900;
+    line-height: 60px;
+    vertical-align: middle;
+    padding-left: 15px;
 }
 
 #texto_fazemos{
-    width: 90%;
-    height: 85%;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
     float: left;
-    font-size: 20px;
+    font-size: 23px;
     font-family: sans-serif;
     text-align: justify;
-    overflow: auto;
+    /* background-color: orange; */
 }
 
 .pula1{
@@ -173,8 +171,10 @@ header{
 
 #direita{
     width: 35%;
-    height: 400px;
+    height: 420px;
+    margin-top: 60px;
     float: left;
+    margin-left: 5%;
 }
 
 #imagem{
@@ -187,6 +187,35 @@ header{
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+/* seção de missão, visão e valores */
+.missao_visao_valores{
+    width: 1300px;
+    height: 300px;
+    clear: both;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones_informacoes{
+    width: 380px;
+    height: 250px;
+    float: left;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.texto_informacoes{
+    width: 99%;
+    min-height: 85%;
+    float: left;
+    font-size: 23px;
+    font-family: sans-serif;
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -206,31 +235,29 @@ header{
 
 /*area de soluções desenvolvidas pelas empresas*/
 .segura{
-    width: 70%;
-    min-height: :0px;
+    width: 1100px;
+    min-height: 400px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 100px;
-    /* background-color: green; */
 }
 
 .icones{
     width: 310px;
-    min-height: 200px;
+    min-height: 220px;
+    height: auto;
     float: left;
     margin-left: 30px;
     padding-left: 10px;
-    /* background-color: red; */
 }
 
 .icone_redondo{
-    width: 200px;
-    height: 200px;
-    background-color: #FFFFFF;
+    width: 220px;
+    height: 220px;
+    background-color: #3053a5;
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid #000000;
 }
 
 .icone_redondo_estilo{
@@ -243,26 +270,20 @@ header{
 }
 
 .icone_redondo img{
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: 60px;
+    margin-top: 60px;
 }
 
 .descricao{
     width: 270px;
-    height: 140px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: 18px;
-    /* background-color: yellow; */
 }
 
 /* area de portifolio do site */
-.teste{
-    width: 100%;
-    min-height: 0px;
-    height: auto;
-    /* background-color: orange; */
-}
-
 .portfolio{
     width: 99%;
     margin-left: auto;
@@ -271,12 +292,13 @@ header{
 
 .texto_protfolio{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "OCRAStd";
+    margin-top: 20px;
 }
 
 .area_protfolio{
-    width: 66%;
+    width: 70%;
     height: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -310,7 +332,6 @@ header{
 footer{
     width: 100%;
     height: 80px;
-    /* background-color: #3053a5; */
     background-color: #000000;
     font-size: 1.2em;
     text-align: center;
@@ -329,7 +350,7 @@ footer{
     width: 50px;
     height: 50px;
     float: right;
-    margin-top: -70px;
+    margin-top: -110px;
     margin-right: 10px;
     background-image: url('../imagens/fechar.png');
     background-position: center;

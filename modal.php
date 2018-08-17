@@ -40,7 +40,7 @@
             /* Troca a cor do elemento conforme for bloqueado
                 variavel campo é recebida na função, nela contem o ID  do elemento a ser formatado
             */
-                document.getElementById(campo).style="color:#FF0000;";
+                document.getElementById(campo).style="border-color:#FF0000;";
                 document.write
                 return false;
                 }
@@ -71,7 +71,7 @@
                 <div class="label">
                     Telefone
                 </div>
-                <input id="telefone" class="inputs" type="tel" name="txtTelefone" value="" placeholder="Informe seu telefone..." required maxlength="13" onkeypress="formatPhone(this, id); return validar(event, 'caracter', 'telefone')">
+                <input id="telefone" class="inputs" type="tel" name="txtTelefone" value="" placeholder="Informe seu telefone..." required maxlength="14" onkeypress="formatPhone(this, id); return validar(event, 'caracter', 'telefone')">
             </div>
             <div class="linhaCampo">
                 <div class="label">
@@ -88,7 +88,6 @@
     </section>
     <hr>
     <div class="contentBotao">
-        <input class="botaoStyle" type="submit" name="btnEnviar" value="Enviar">
-        <input class="botaoStyle" type="reset" name="btnCancelar" id="btnCancelar" value="Limpar">
+        <input class="botaoStyle" type="submit" name="btnEnviar" value="< Enviar />">
     </div>
 </form>

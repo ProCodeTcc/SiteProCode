@@ -17,6 +17,7 @@
         VALUES ('".$nome."', '".$telefone."', '".$email."', '".$mensagem."')";
 
         mysqli_query($conexao, $sql);
+        header('location:index.php');
     }
  ?>
 <html>
@@ -67,10 +68,10 @@
              function scrollToLink( link ) {
                selectLink = $( link );
                if ( selectLink.length ) {
-                 var top = selectLink.offset().top - CORRECTION;
-                 $('body,html').stop().animate({scrollTop: top}, DELAY_SCROLLING);
+                   var top = selectLink.offset().top - CORRECTION;
+                   $('body,html').stop().animate({scrollTop: top}, DELAY_SCROLLING);
                } else {
-                 console.log('The link is not found: ' + link);
+                   console.log('The link is not found: ' + link);
                }
              }
         </script>
@@ -79,8 +80,7 @@
         <header>
             <!--
             efeito vue-typer
-            mudar a font do site
--->
+            -->
             <nav class="contentCentralizar">
                 <a href="body">
                     <div class="logoHeader"></div>
@@ -143,13 +143,21 @@
                     </div>
                     <div id="texto_fazemos">
                         <p class="pula1">
-                            A ProCode, uma StartUp no ramo de desenvolvimento de software, foi idealizada por um grupo de quatro amigos, que são apaixonados por tecnologia.
+                            A ProCode, uma StartUp no ramo de desenvolvimento de software, foi idealizada por um
+                            grupo de quatro amigos, que são apaixonados por tecnologia.
                         </p>
                         <p class="pula1">
-                            O sonho de trabalhar com o que gostam, os levaram se especializarem na área de desenvolvimento de softwares, mas há um tempo atrás não tinham pretensão do que estava por vir. Até que se conheceram em um evento de tecnologia, mantiveram contato e idealizaram um sonho de serem reconhecidos no mercado, mas não como funcionário e sim como empresários.
+                            O sonho de trabalhar com o que gostam, os levaram se especializarem na área de
+                            desenvolvimento de softwares, mas há um tempo atrás não tinham pretensão do que estava
+                            por vir. Até que se conheceram em um evento de tecnologia, mantiveram contato e
+                            idealizaram um sonho de serem reconhecidos no mercado, mas não como funcionário e sim
+                            como empresários.
                         </p>
                         <p class="pula1">
-                            Fundada no ano de 2018, esta empresa tem por finalidade ser umas das melhores na área de desenvolvimento, trabalhando com soluções para as plataformas Web, Mobile(Android) e Desktop. Com a intenção potencializar pequenos negócios no mercado de trabalho, a empresa começou a ficar conhecida no mundo digital.
+                            Fundada no ano de 2018, esta empresa tem por finalidade ser umas das melhores na área
+                            de desenvolvimento, trabalhando com soluções para as plataformas Web, Mobile(Android)
+                            e Desktop. Com a intenção potencializar pequenos negócios no mercado de trabalho, a
+                            empresa começou a ficar conhecida no mundo digital.
                         </p>
                     </div>
                 </div>
@@ -158,7 +166,51 @@
                         <img src="imagens/foto.jpg">
                     </div>
                 </div>
-             </div>
+            </div>
+            <div class="missao_visao_valores">
+                <div class="icones_informacoes">
+                    <div class="titulo">
+                        Missão
+                    </div>
+                    <div class="texto_informacoes">
+                        Desenvolver softwares para pequenos negócios, contribuindo com o crescimento
+                        das empresas, através da potencialização de seu negócio dando mais visibilidade
+                        ao cliente no mundo digital.
+                    </div>
+                </div>
+                <div class="icones_informacoes">
+                    <div class="titulo">
+                        Visão
+                    </div>
+                    <div class="texto_informacoes">
+                        Ser reconhecida como uma das melhores desenvolvedoras de softwares no mundo tecnológico.
+                    </div>
+                </div>
+                <div class="icones_informacoes">
+                    <div class="titulo">
+                        Valores
+                    </div>
+                    <div class="texto_informacoes">
+                        <ul>
+                            <li>
+                                Soluções de qualidade;
+                            </li>
+                            <li>
+                                Satisfazer nossos cliente;
+                            </li>
+                            <li>
+                                Qualidade de vida;
+                            </li>
+                            <li>
+                                Ética e respeito;
+                            </li>
+                            <li>
+                                Preocupação com o sucesso do cliente.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- div transparente que faz efeito do background -->
@@ -166,40 +218,38 @@
 
         <!-- seção que fala das soluções -->
         <section class="segundo_full" id="solucoes">
-            <div class="content content_conteudo">
-                <div class="teste">
-                    <div class="titulo">
-                        <u>
-                            SOLUÇÕES
-                        </u>
+            <div class="content">
+                <div class="titulo">
+                    <u>
+                        SOLUÇÕES
+                    </u>
+                </div>
+                <div class="segura">
+                    <div class="icones">
+                        <div class="icone_redondo">
+                                <img src="imagens/desktop.png">
+                        </div>
+                        <div class="descricao">
+                            <p class="pula"><b>Desktop</b></p>
+                            <p class="pula">Desktop é a principal ferramenta para o controle da empresa.</p>
+                        </div>
                     </div>
-                    <div class="segura">
-                        <div class="icones">
-                            <div class="icone_redondo">
-                                    <img src="imagens/desktop.png">
-                            </div>
-                            <div class="descricao">
-                                <p class="pula"><b>Desktop</b></p>
-                                <p class="pula">Desktop é a principal ferramenta para o controle da empresa.</p>
-                            </div>
+                    <div class="icones">
+                        <div class="icone_redondo">
+                            <img src="imagens/web.png">
                         </div>
-                        <div class="icones">
-                            <div class="icone_redondo">
-                                <img src="imagens/web.png">
-                            </div>
-                            <div class="descricao">
-                                <p class="pula"><b>Web</b></p>
-                            <p class="pula">Paginas web são para o reconhecimento e divulgação.</p>
-                            </div>
+                        <div class="descricao">
+                            <p class="pula"><b>Web</b></p>
+                        <p class="pula">Paginas web são para o reconhecimento e divulgação.</p>
                         </div>
-                        <div class="icones">
-                            <div class="icone_redondo">
-                                <img src="imagens/celular.png">
-                            </div>
-                            <div class="descricao">
-                                <p class="pula"><b>Mobile</b></p>
-                                <p class="pula">Desenvolvemos soluçoes mobile para aparelhos android.</p>
-                            </div>
+                    </div>
+                    <div class="icones">
+                        <div class="icone_redondo">
+                            <img src="imagens/celular.png">
+                        </div>
+                        <div class="descricao">
+                            <p class="pula"><b>Mobile</b></p>
+                            <p class="pula">Desenvolvemos soluçoes mobile para aparelhos android.</p>
                         </div>
                     </div>
                 </div>
@@ -212,33 +262,31 @@
         <!-- sseção que fala de nossos produtos -->
         <section class="segundo_full" id="portifolio">
             <div class="content">
-                <div class="teste">
-                    <div class="titulo">
-                        <u>
-                            Portifólio
-                        </u>
+                <div class="titulo">
+                    <u>
+                        Portifólio
+                    </u>
+                </div>
+                <div class="portfolio">
+                    <div class="texto_protfolio">
+                        Barbearia Cachorro Loko
                     </div>
-                    <div class="portfolio">
-                        <div class="texto_protfolio">
-                            Barbearia Cachorro Loko
-                        </div>
-                        <div class="area_protfolio">
-                            <div class="imagens_protfolio_unico">
-                                <img src="imagens/web_pc2.png">
-                            </div>
+                    <div class="area_protfolio">
+                        <div class="imagens_protfolio_unico">
+                            <img src="imagens/web_pc2.png">
                         </div>
                     </div>
-                    <div class="portfolio">
-                        <div class="texto_protfolio">
-                            Padoka Hill valley
+                </div>
+                <div class="portfolio">
+                    <div class="texto_protfolio">
+                        Padoka Hill valley
+                    </div>
+                    <div class="area_protfolio">
+                        <div class="imagens_protfolio">
+                            <img src="imagens/web_pc.png">
                         </div>
-                        <div class="area_protfolio">
-                            <div class="imagens_protfolio">
-                                <img src="imagens/web_pc.png">
-                            </div>
-                            <div class="imagens_protfolio_mobile">
-                                <img src="imagens/galaxy.png">
-                            </div>
+                        <div class="imagens_protfolio_mobile">
+                            <img src="imagens/galaxy.png">
                         </div>
                     </div>
                 </div>
