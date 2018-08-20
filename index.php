@@ -25,7 +25,9 @@
         <title> ProCode </title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="css/styleModal.css">
+        <link rel="stylesheet" href="css/styleText.css">
         <script src="js/jquery.js"> </script>
+        <script src="index.js"></script>
         <script>
             // abrir a modal
             $(document).ready(function(){
@@ -126,8 +128,18 @@
                 <div id="logo">
                     <img src="imagens/teste2.png">
                 </div>
-                <div id="slogan">
-                    O Futuro é agora !
+                <div class="contentSlogan">
+                    <div id="slogan" class="visible">
+                        <p class="p">
+                            O Futuro é
+                        </p>
+                        <ul class="ul">
+                            <li class="li">agora !</li>
+                            <li class="li">software !</li>
+                            <li class="li">tecnologia !</li>
+                            <li class="li">ProCode !</li>
+                        </ul>
+                    </div>
                 </div>
              </div>
         </section>
